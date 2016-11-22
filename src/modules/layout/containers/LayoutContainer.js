@@ -15,12 +15,15 @@ class App extends Component {
 
   render() {
     return (
-      <Grid fluid>
+      <Grid>
         <Row>
           <Col xs={12}><Navbar/></Col>
         </Row>
+        <div style={{margin: '2em 0'}}></div>
         <Row>
-          {this.props.children}
+          <Col xs={12}>
+            {this.props.children}
+          </Col>
         </Row>
       </Grid>
     );

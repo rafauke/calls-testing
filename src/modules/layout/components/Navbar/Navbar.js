@@ -1,9 +1,9 @@
 import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { IndexLink, Link } from 'react-router';
+import OnlineIndicator from 'modules/online/components/OnlineIndicator/OnlineIndicator';
 
 import logo from 'assets/logo.svg';
-import LanguageDropdown from 'modules/i18n/containers/LanguageDropdown/LanguageDropdown';
 import { signOut } from 'modules/firebase/actions';
 import style from './Navbar.scss';
 
@@ -19,27 +19,10 @@ const Navbar = props => (
       <Link to="/demo" activeClassName={style.ActiveLink}>
         <button className={'pt-button pt-minimal pt-icon-home'}>Demo</button>
       </Link>
-      <Link to="/api" activeClassName={style.ActiveLink}>
-        <button className={'pt-button pt-minimal pt-icon-home'}>Api demo</button>
-      </Link>
-      {props.authenticated ?
-        <button
-          className={'pt-button pt-minimal pt-icon-user'}
-          onClick={props.signOut}
-        >
-          Firebase sign out
-        </button> :
-        <Link to="/signin" activeClassName={style.ActiveLink}>
-          <button className={'pt-button pt-minimal pt-icon-user'}>Firebase sign in</button>
-        </Link>
-      }
-      <span className={'pt-navbar-divider'} />
-      <button className={'pt-button pt-minimal pt-icon-user'} />
-      <button className={'pt-button pt-minimal pt-icon-notifications'} />
-      <button className={'pt-button pt-minimal pt-icon-cog'} />
     </div>
     <div className={'pt-navbar-group pt-align-right'}>
-      <LanguageDropdown />
+      <span className={`${style.DemoTitle} pt-text-muted`}>Tables demo</span>
+      <OnlineIndicator size={8} online={props.online}/>
     </div>
   </nav>
 );
@@ -47,9 +30,11 @@ const Navbar = props => (
 Navbar.propTypes = {
   authenticated: PropTypes.bool,
   signOut: PropTypes.func,
+  online: PropTypes.bool,
 };
 
 const mapStateToProps = state => ({
+  online: state.online,
   authenticated: state.firebase.authenticated,
 });
 

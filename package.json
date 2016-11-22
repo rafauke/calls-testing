@@ -98,6 +98,7 @@
     "react-redux": "^4.4.5",
     "react-router": "^3.0.0",
     "react-router-redux": "^4.0.7",
+    "react-table": "^3.1.2",
     "redux": "^3.5.2",
     "redux-ignore": "^1.2.4",
     "redux-thunk": "^2.1.0",

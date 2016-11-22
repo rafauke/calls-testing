@@ -5895,6 +5895,12 @@ react-router-redux:
   version "4.0.7"
   resolved "https://registry.yarnpkg.com/react-router-redux/-/react-router-redux-4.0.7.tgz#9b1fde4e70106c50f47214e12bdd888cfb96e2a6"
 
+react-table:
+  version "3.1.2"
+  resolved "https://registry.yarnpkg.com/react-table/-/react-table-3.1.2.tgz#4d4405e7337cc6a28978119e9e0d9d48a072051c"
+  dependencies:
+    classnames "^2.2.5"
+
 read-chunk@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/read-chunk/-/read-chunk-1.0.1.tgz#5f68cab307e663f19993527d9b589cace4661194"
