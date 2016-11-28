@@ -49,10 +49,14 @@ exports.generateIndexTemplate = function () {
   return {
     plugins: [
       new HtmlWebpackPlugin({
-        template: 'webpack/templates/index.ejs',
+        template: require('html-webpack-template'),
         title: constants.APP_TITLE,
         appMountId: constants.APP_MOUNT_ID,
         inject: false,
+        mobile: true,
+        links: [
+          'https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css',
+        ],
       }),
     ],
   };

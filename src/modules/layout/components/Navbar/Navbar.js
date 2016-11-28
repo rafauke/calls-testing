@@ -28,14 +28,12 @@ const Navbar = props => (
 );
 
 Navbar.propTypes = {
-  authenticated: PropTypes.bool,
   signOut: PropTypes.func,
   online: PropTypes.bool,
 };
 
 const mapStateToProps = state => ({
   online: state.online,
-  authenticated: state.firebase.authenticated,
 });
 
 const mapDispatchToProps = dispatch => ({

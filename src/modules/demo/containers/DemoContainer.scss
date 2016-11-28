@@ -2,7 +2,78 @@
 @import '../../../containers/Global';
 
 .DemoContainer {
-  max-height: calc(100vh - #{$app-header-height});
   height: 100%;
   overflow: hidden;
+}
+
+table {
+  background-color: #fff;
+  border: 1px solid #888;
+  table-layout: fixed;
+  max-width: 800px;
+  margin: 30px 0;
+  width: 100%;
+
+  tr {}
+
+  tr:nth-child(odd) {
+    background-color: #eee;
+  }
+
+  th {
+    background-color: #fff;
+    padding: 6px 12px;
+    border: 1px solid #888;
+  }
+
+  :global {
+
+    .reactable-header-sortable {
+      cursor: pointer;
+    }
+
+    .reactable-header-sortable:focus {
+      outline: 0;
+    }
+
+    .reactable-page-button {
+      padding: 4px 8px;
+      background-color: #fff;
+      border: 1px solid #ddd;
+    }
+
+    .reactable-header-sort-asc,
+    .reactable-header-sort-desc {
+      position: relative;
+
+      &::after {
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        transform: translateY(-50%);
+      }
+    }
+
+    .reactable-header-sort-asc::after {
+      content: '\25BC';
+    }
+
+    .reactable-header-sort-desc::after {
+      content: '\25B2';
+    }
+
+    .reactable-current-page {
+      background-color: navy;
+      color: #fff;
+    }
+
+    .reactable-pagination {
+      text-align: center;
+    }
+  }
+
+  td {
+    padding: 6px 12px;
+    border: 1px solid #888;
+  }
 }
