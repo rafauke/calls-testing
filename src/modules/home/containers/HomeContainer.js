@@ -1,7 +1,6 @@
 import React, { PropTypes, Component } from 'react';
-import {Link} from 'react-router';
+import { Link } from 'react-router';
 import { connect } from 'react-redux';
-import { FormattedDate, FormattedMessage } from 'react-intl';
 
 import { setName } from 'modules/home/actions/setName';
 import style from './HomeContainer.scss';

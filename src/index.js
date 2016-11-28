@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom';
-import { AppContainer as HotLoader} from 'react-hot-loader';
+import { AppContainer as HotLoader } from 'react-hot-loader';
 import { browserHistory } from 'react-router';
 import { syncHistoryWithStore } from 'react-router-redux';
 import Root from 'containers/Root';
