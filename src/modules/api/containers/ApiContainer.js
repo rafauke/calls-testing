@@ -1,6 +1,5 @@
 import React, { PropTypes, Component } from 'react';
 import { connect } from 'react-redux';
-import { FormattedMessage } from 'react-intl';
 import { Button } from '@blueprintjs/core';
 
 import Spinner from 'modules/api/components/Spinner';
@@ -14,11 +13,7 @@ class ApiContainer extends Component {
     return (
       <div className={style.ApiContainer}>
         <h1>
-          <FormattedMessage
-            id={'api.title'}
-            description={'Api container title'}
-            defaultMessage={'Api container'}
-          />
+          Api Container
         </h1>
         {this.props.users.isLoading ?
           <Spinner /> :

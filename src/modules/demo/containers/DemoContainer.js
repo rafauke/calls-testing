@@ -1,5 +1,4 @@
 import React, { Component, PropTypes } from 'react';
-import { FormattedMessage } from 'react-intl';
 import { connect } from 'react-redux';
 import { Table } from 'reactable';
 import { autobind } from 'core-decorators';
@@ -68,11 +67,7 @@ class DemoContainer extends Component {
     return (
       <div className={style.DemoContainer}>
         <h1>
-          <FormattedMessage
-            id={'demo.title'}
-            description={'Demo container title'}
-            defaultMessage={'Demo Container'}
-          />
+          Demo Container
         </h1>
         <button role="button" onClick={this.props.fetchData}>Get The Data</button>
         <br /><br />

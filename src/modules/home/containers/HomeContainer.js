@@ -1,4 +1,5 @@
 import React, { PropTypes, Component } from 'react';
+import {Link} from 'react-router';
 import { connect } from 'react-redux';
 import { FormattedDate, FormattedMessage } from 'react-intl';
 
@@ -11,11 +12,7 @@ class HomeContainer extends Component {
     return (
       <div className={style.HomeContainer}>
         <h1>
-          <FormattedMessage
-            id={'home.title'}
-            description={'Home container title'}
-            defaultMessage={'Welcome!'}
-          />
+          Welcome :) Go to <Link to="demo">Demo</Link> Tab.
         </h1>
       </div>
     );

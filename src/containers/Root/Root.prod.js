@@ -7,24 +7,21 @@ import DemoContainer from 'modules/demo/containers/DemoContainer';
 import ApiContainer from 'modules/api/containers/ApiContainer';
 import SignInContainer from 'modules/firebase/containers/SignInContainer';
 import LayoutContainer from 'modules/layout/containers/LayoutContainer';
-import LocaleProvider from 'modules/i18n/containers/LocaleProvider';
 
 class Root extends Component {
   render() {
-    const {store, history} = this.props;
+    const { store, history } = this.props;
 
     return (
       <Provider store={store}>
-        <LocaleProvider>
-          <Router history={history}>
-            <Route path="/" component={LayoutContainer}>
-              <IndexRoute component={HomeContainer}/>
-              <Route path="demo" component={DemoContainer}/>
-              <Route path="api" component={ApiContainer}/>
-              <Route path="signin" component={SignInContainer}/>
-            </Route>
-          </Router>
-        </LocaleProvider>
+        <Router history={history}>
+          <Route path="/" component={LayoutContainer}>
+            <IndexRoute component={HomeContainer}/>
+            <Route path="demo" component={DemoContainer}/>
+            <Route path="api" component={ApiContainer}/>
+            <Route path="signin" component={SignInContainer}/>
+          </Route>
+        </Router>
       </Provider>
     );
   }
